@@ -1,6 +1,6 @@
 import { Header } from "../Components/Header/Header";
 export default {
-  title: "Example/Header",
+  title: "UI-Kit/Header",
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],

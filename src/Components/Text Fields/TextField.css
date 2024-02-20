@@ -1,0 +1,20 @@
+input[type="text"],
+input[type="password"],
+input[type="search"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus {
+  border-color: #007bff;
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled {
+  background-color: #e9ecef;
+}
