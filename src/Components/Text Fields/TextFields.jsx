@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./TextField.css";
+import "./textField.css";
 
 export const TextField = ({
   type = "text",
@@ -11,24 +11,28 @@ export const TextField = ({
   margin,
   disabled,
   readOnly,
+  icon,
   ...props
 }) => {
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      style={{
-        fontSize,
-        color: fontColor,
-        padding,
-        margin,
-        ...(disabled && { opacity: 0.5, cursor: "not-allowed" }),
-        ...(readOnly && { backgroundColor: "#f0f0f0" }),
-      }}
-      disabled={disabled}
-      readOnly={readOnly}
-      {...props}
-    />
+    <div className={`text-field ${type === "search" ? "search" : ""}`}>
+      {type === "search" && <span className="search-icon">{icon}</span>}
+      <input
+        type={type}
+        placeholder={placeholder}
+        style={{
+          fontSize,
+          color: fontColor,
+          padding,
+          margin,
+          ...(disabled && { opacity: 0.5, cursor: "not-allowed" }),
+          ...(readOnly && { backgroundColor: "#f0f0f0" }),
+        }}
+        disabled={disabled}
+        readOnly={readOnly}
+        {...props}
+      />
+    </div>
   );
 };
 
@@ -41,6 +45,7 @@ TextField.propTypes = {
   margin: PropTypes.string,
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
+  icon: PropTypes.node,
 };
 
 export default TextField;

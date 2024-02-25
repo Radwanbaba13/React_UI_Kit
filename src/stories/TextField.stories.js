@@ -1,9 +1,13 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
 import TextField from "../Components/Text Fields/TextFields";
 
 export default {
   title: "UI-Kit/TextFields",
   component: TextField,
+
+  tags: ["autodocs"],
+
   argTypes: {
     type: {
       control: { type: "select", options: ["text", "password", "search"] },
@@ -23,5 +27,5 @@ export const PasswordField = () => (
   <TextField type="password" placeholder="Password Field" />
 );
 export const SearchBar = () => (
-  <TextField type="search" placeholder="Search Bar" />
+  <TextField type="search" placeholder="Search Bar" icon={<FaSearch />} />
 );

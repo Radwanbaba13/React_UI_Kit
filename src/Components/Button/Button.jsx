@@ -25,8 +25,8 @@ export const Button = ({
       type="button"
       className={["storybook-button", sizeClass, mode].join(" ")}
       style={{
-        backgroundColor,
-        fontSize,
+        bg: backgroundColor,
+        fontSize: fontSize,
         color: fontColor,
         padding,
         margin,

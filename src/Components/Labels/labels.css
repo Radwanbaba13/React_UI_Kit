@@ -1,0 +1,16 @@
+.label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+  }
+  
+  .label.heading {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .label.description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  

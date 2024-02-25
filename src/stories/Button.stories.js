@@ -10,13 +10,19 @@ export default {
   tags: ["autodocs"],
 
   argTypes: {
+    primary: { control: "boolean" },
     backgroundColor: { control: "color" },
+    size: {
+      control: { type: "select", options: ["small", "medium", "large"] },
+    },
+    label: { control: "text" },
     fontSize: { control: "text" },
     fontColor: { control: "color" },
     disabled: { control: "boolean" },
-    icon: { control: "text" }, // For simplicity, use text control for icon. Ideally, this should be a component.
+    icon: { control: "text" },
     padding: { control: "text" },
     margin: { control: "text" },
+    onClick: { action: "clicked" },
   },
 };
 
